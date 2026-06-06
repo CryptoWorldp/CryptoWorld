@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CryptoWorld — Мир криптовалют</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <div class="top-bar">
+    <div class="logo">Crypto<span>World</span></div>
+
+    <div class="search-box">
+      <input
+        class="search-input"
+        type="text"
+        id="searchInput"
+        placeholder="Поиск"
+        oninput="searchPages()"
+      />
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <nav>
+    <div class="menu-item">
+      <a class="menu-btn" id="navHome" onclick="openPage('home')">ГЛАВНАЯ</a>
+    </div>
+
+    <div class="menu-item">
+      <a class="menu-btn" id="navInfo">СВЕДЕНИЯ О КРИПТОВАЛЮТАХ</a>
+      <div class="dropdown">
+        <a onclick="openPage('whatCrypto')" id="dropTerms">Основные термины</a>
+        <a onclick="openPage('cryptoHistory')" id="dropHistory">История криптовалют</a>
+        <a onclick="openPage('cryptoTypes')" id="dropTypes">Виды криптовалют</a>
+        <a onclick="openPage('cryptoUse')" id="dropUse">Где используются криптовалюты</a>
+        <a onclick="openPage('cryptoProsCons')" id="dropProsCons">Преимущества и недостатки криптовалют</a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <a class="menu-btn" id="navCoins">ПОПУЛЯРНЫЕ МОНЕТЫ</a>
+      <div class="dropdown">
+        <a onclick="openPage('bitcoin')">Bitcoin</a>
+        <a onclick="openPage('ethereum')">Ethereum</a>
+        <a onclick="openPage('usdt')">USDT</a>
+        <a onclick="openPage('solana')">Solana</a>
+        <a onclick="openPage('coinCompare')" id="dropCompare">Другие монеты</a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <a class="menu-btn" id="navBlockchain">БЛОКЧЕЙН</a>
+      <div class="dropdown">
+        <a onclick="openPage('blockchainMain')" id="dropBlockchainMain">Что такое блокчейн</a>
+        <a onclick="openPage('transactions')" id="dropTransactions">Транзакции</a>
+        <a onclick="openPage('mining')" id="dropMining">Майнинг</a>
+        <a onclick="openPage('smartContracts')" id="dropSmart">Смарт-контракты</a>
+      </div>
+    </div>
+  
+    <div class="menu-item">
+      <a class="menu-btn" id="navBeginnerMaterials">ПОЛЕЗНЫЕ МАТЕРИАЛЫ НОВИЧКУ</a>
+      <div class="dropdown">
+        <a onclick="openPage('beginnerStart')" id="dropStart">С чего начать</a>
+        <a onclick="openPage('firstBuy')" id="dropFirstBuy">Первая покупка криптовалюты</a>
+        <a onclick="openPage('typicalMistakes')" id="dropMistakes">Типичные ошибки и безопасность пользователя</a>
+        <a onclick="openPage('links')" id="dropLinks">Полезные ссылки</a>
+      </div>
+    </div>
+
+  </nav>
+</header>
+
+<main id="app"></main>
+
+<div class="page-switcher" id="pageSwitcher"></div>
+
+<div class="quick-settings">
+  <div class="theme-dots">
+    <button class="theme-dot light-dot" title="Светлая тема" onclick="setTheme('light')"></button>
+    <button class="theme-dot dark-dot" title="Тёмная тема" onclick="setTheme('dark')"></button>
+  </div>
+
+  <div class="language-flags">
+    <button class="lang-text" title="Русский язык" onclick="setLanguage('ru')">RU</button>
+    <button class="lang-text" title="English language" onclick="setLanguage('en')">EN</button>
+  </div>
+</div>
+
+<footer>
+  <p id="footerText">© 2026 CryptoWorld. Учебный сайт о криптовалютах.</p>
+</footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
